@@ -13,7 +13,7 @@ function LandingPage() {
     <div>
       <Navbar />
       {user && <p>Hello {user.username}</p>}
-      <p>{value}</p>
+      {/* <p>{value}</p> */}
       <Steps />
       <Community />
       <Footer />
