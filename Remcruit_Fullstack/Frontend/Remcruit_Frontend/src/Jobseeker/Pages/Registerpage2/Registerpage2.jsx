@@ -133,10 +133,6 @@ function Registerpage2() {
            <p>Browse through thousands of job listings, companies, organisations and internships. Start creating 
               connections with companies now.</p>
          </div>
-         {/* <div >
-          <img src={Frame2} alt="Frame" className='frame' />
-
-         </div> */}
          
     </div>
     <div className="right-register-side">
@@ -150,13 +146,7 @@ function Registerpage2() {
         
                 <form onSubmit={handleSubmitted}>
                       {pageDisplay()}
-                      {/* <input type="submit" value="Register" id="submit" />  */}
-
-
-                     {/* {page===0 ? (<div className="nextBtn" onClick={nextPage} id="next">
-                 <button className="buttons">Continue </button>
-                 
-                </div>):( <input type="submit" value="Register" id="submit" /> )}  */}
+                    
 
                 {page===2 ? ( <input type="submit" value="Register" id="submit" /> ):
                 (<div className="nextBtn" id="next">
@@ -164,11 +154,7 @@ function Registerpage2() {
                  
                 </div>)}
 
-{/* {page !=(2)? Continue:submit} */}
-                      {/* <div className="nextBtn" onClick={nextPage} id="next">
-                  next
-                  <FontAwesomeIcon icon={faChevronRight} className="nextIcon" />
-                </div> */}
+
 
       </form>
     </div>
@@ -177,168 +163,14 @@ function Registerpage2() {
     }
    
         
-      // <div className="register2-main-container">
-
-      // <div className="rightside-container">
-      //     <div className="registerion-text">
-      //       <h1>
-      //       Looking to start your career?
-      //       </h1>
-
-      //       <h3>We’ve got your back</h3>
-
-      //       <p>Browse through thousands of job listings, companies, organisations and internships. Start creating 
-      //          connections with companies now.</p>
-      //     </div>
-         
-          
-      //   </div>
-
-
-
-
-      //   <div className="leftside-container">
-      //     <div className="leftside-container-content">
-      //     <div className="backBtn" onClick={prevPage}>
-      //             <FontAwesomeIcon icon={faChevronLeft} className="backIcon" />
-      //             back
-      //           </div>
+   
 
           <div className="accounts">
-                {/* <div className='pages'>
-                  <div className={page === 0 ? "actives" : ""} onClick={handlePage1} id='pageOne'> </div>
-                  <div className={page === 1 ? "active" : ""} onClick={handlePage2} id='pageTwo'> </div>
-            </div> */}
-      //       </div>
-      //       <div className='info'>
-      //             <p className={page === 0 ? "actives" : ""}  id='T'>Account details</p>
-      //             <p className={page === 1 ? "actives" : ""}  id='T'>Study Details</p>
-                  
-      //           </div>
-      //            <div className="outlet"> 
-      //             <div className="forms">
-      //               <form onSubmit={handleSubmit}>
-      //                 {pageDisplay()}
-      //                 <input type="submit" value="Register" id="submit" />
-      //               </form>
-      //             </div>
-      //           </div> 
-      //           </div>
-      //           </div>
-      //       </div>
-         
-      
-              
-               
-             
+                </div>
 
-         
-  // );
-// }
 
- {/* <div className="continue">
-                <button>
-                    Continue
-                </button> */}
+
 
 export default Registerpage2;
 
 
-{/* <div className="registeration">
-<form onSubmit={handleSubmit}>
-
-   <div className="name">
-       <div className="first-Name">
-           <label>First Name*</label>
-           <input
-               type="text"
-               name="firstname"
-               value={formData.first_name}
-               onChange={(e) => setFormData({ ...formData, first_name: e.target.value })}
-               placeholder='Firstname' />
-       </div>
-       <div className="last-Name">
-           <label>Last Name*</label>
-           <input
-               type="text"
-               name="lastname"
-               value={formData.last_name}
-               onChange={(e) => setFormData({ ...formData, last_name: e.target.value })}
-               placeholder='Lastname' />
-       </div>
-   </div>
-   <div className="gender">
-       <div className='genders'>
-           <label>Gender*</label>
-           <div className='gender-der'>
-               <div className='female'>
-                   <input
-                       type="radio"
-                       name="female"
-                       value="Female"
-                       onChange={(e) => setFormData({ ...formData, gender: e.target.value })}
-                       checked={formData.gender === "Female"}
-                   /> Female
-               </div>
-               <div className='male'>
-                   <input
-                       type="radio"
-                       name="male"
-                       value="Male"
-                       onChange={(e) => setFormData({ ...formData, gender: e.target.value })}
-                       checked={formData.gender === "Male"}
-                   /> Male
-               </div>
-           </div>
-       </div>
-       <div className="phones">
-    
-    <div className="emails">
-        <label>Email*</label>
-        <input
-            type="text"
-            name="email"
-            value={formData.email}
-            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            placeholder='email' />
-    </div>
-    <div className="phoneNom">
-        <label>Phone Number*</label>
-        <input
-            type="tel"
-            name="phoneNumber"
-            value={formData.phone_number}
-            onChange={(e) => setFormData({ ...formData, phone_number: e.target.value })}
-            placeholder='' />
-    </div>
-</div>
-<div className="pass-word">
-    <div className="passwords">
-        <label>Password*</label>
-        <input
-            type="password"
-            name="password"
-            value={formData.password}
-            onChange={(e) => setFormData({ ...formData, password: e.target.value })} />
-    </div>
-    <div className="confimPassword">
-        <label>Confirm Password*</label>
-        <input
-            type="password"
-            name="password2"
-            value={formData.password2}
-            onChange={(e) => setFormData({ ...formData, password2: e.target.value })} />
-    </div>
-</div>
-
-<div className="terms-And-Conditions">
-  <label>Terms and Conditions</label>
-  <input
-      type="checkbox"
-      name="terms"
-      value="False"
-      onChange={checkboxHandler}
-  // 
-  />
-  I accept the Terms and Conditions and Privacy Policy
-</div> */}

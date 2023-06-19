@@ -3,22 +3,30 @@ import React from 'react'
 import EmployerNavbar from '../../components/navbarlanding/navbar'
 import Posting from '../../components/samplePosting/posting'
 import './landingStyles.css'
+import TotalLogo from "./static/total.png";
+import channels from "./static/channels.png";
+import Footer from '../../../components/Footer/Footer'
+
 
 function LandingPage() {
 
     return (
         <>
             <EmployerNavbar />
+            <div className="mainlanding">
             <div className="all">
 
                 <div className="heroSection">
                     <div className='leftHero'>
                         <div className="titleSection">
-                            < Posting />
+                            <h2>Hire the right people for your business </h2>
+                            <p>Choose a plan that best suits you, so that your job can be recognized by the best candidates</p>
+                            {/* < Posting /> */}
                         </div>
-                        <div className="companiesSection"></div>
+                       
+                       
                     </div>
-                    <div className="womanSection">woman</div>
+                  
                 </div>
                 <div className="cardsSection">
                     <div className="gold">Gold</div>
@@ -26,17 +34,23 @@ function LandingPage() {
                     <div className="silver">Silver</div>
                 </div>
                 <div className="featuresSection">
-                    <div className="feature">job board <hr /></div>
-                    <div className="feature">dashboard <hr /></div>
-                    <div className="feature">analytics <hr /></div>
-                    <div className="feature">productivity tools <hr /></div>
-                    <div className="feature">candidate management <hr /></div>
-                    <div className="feature">spotlight jobs <hr /></div>
-                    <div className="feature">ad management <hr /></div>
-                    <div className="feature">feature <hr /></div>
+                   <div className="feature">
+                    <p>Reach students across universities in Nigeria</p>
+                   </div>
                 </div>
-                <div className="studentsSection">
-                    <div className="studentsContainer">Reach students</div>
+                <div className="companiesSection">
+                    <div className="companiesContainer">
+                        <p>  Join other Companies that use Remcruit</p>
+                        <div className="companieslogos">
+                        <img src={TotalLogo}alt=""/>  
+                        <img src={channels}alt=""/>  
+                        <img src={TotalLogo}alt=""/>  
+                        <img src={TotalLogo}alt=""/>  
+                        <img src={TotalLogo}alt=""/>  
+                        <img src={TotalLogo}alt=""/>  
+                        <img src={TotalLogo}alt=""/>   
+                        </div>
+                    </div>
                 </div>
                 <div className="statsSection">
                     <div className="statsContainer">
@@ -47,6 +61,8 @@ function LandingPage() {
                     </div>
                 </div>
             </div>
+            </div>
+            <Footer />
         </>
 
     )
