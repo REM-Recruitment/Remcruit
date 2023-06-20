@@ -11,7 +11,7 @@ class ViewEmployerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Employer
         fields = '__all__'
-        depth = 1
+        depth = 2
 
 class JobSerializer(serializers.ModelSerializer):
     class Meta:
@@ -25,8 +25,7 @@ class ViewJobSerializer(serializers.ModelSerializer):
                   'title', 
                   'description', 
                   'job_type', 
-                  'company', 
-                  'location',  
+                  'company',  
                   'job_post_duration', 
                   'salary', 
                   'pay_rate', 

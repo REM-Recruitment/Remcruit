@@ -34,6 +34,8 @@ return(
                     <a href='/jobsearch' ><p> Job Search </p></a>
                     <Link to='/ContactUs'>Contact Us</Link>
                     <a href='/FaqPage'>   <p>FAQ</p></a>
+                    <Link to='/AllCompanies'>All Companies</Link>
+
                     
                 </div>
                 <div className="footer_link_section">

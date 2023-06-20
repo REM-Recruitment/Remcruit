@@ -37,6 +37,7 @@ import JobSeekerRoute from './utils/JobSeekerRoute';
 import EmployerRoute from './utils/EmployerRoute';
 import JobApplicationReview from './Jobseeker/Pages/JobApplication/components/JobApplicationReview';
 import SpecificCompanyPage from './Jobseeker/Pages/SpecificCompanyPage/SpecificCompanyPage';
+import Testing from './pages/Testing/Testing';
 // import Forgotpassword from './components/Forgotpassword/Forgotpassword'
 import terms from './pages/Legal/LegalPage';
 import Legal from './pages/Legal/Term';
@@ -45,6 +46,8 @@ import Cookies from './pages/Legal/Cookies';
 import Term from './pages/Legal/Term';
 import ContactUs from './pages/contactus/ContactUs';
 import NotificationComponent from './Jobseeker/Components/notification/notificationComponent';
+import AllCompanies from './Jobseeker/Pages/AllCompaniespage/AllCompanies';
+import JobseekersSettings from './Jobseeker/Pages/JobseekerSettings/JobseekersSettings';
 
 
 
@@ -82,6 +85,9 @@ function App() {
                     <Route element={<SpecificJobs />} path='/specificjobs' />
                     <Route element={<Myjobspage />} path='/Myjobspage' />
                     <Route element={<SpecificCompanyPage />} path='/specificCompany' />
+                    <Route element={<Testing />} path='/testing' />
+                    <Route path='/AllCompanies' element={<AllCompanies />} />
+                    <Route element={<JobseekersSettings />} path='/JobseekersSettings' />
                   </Route>
                   <Route element={<EmployerRoute />} >
                     <Route path='/employer/job/post' element={<JobPost />} />

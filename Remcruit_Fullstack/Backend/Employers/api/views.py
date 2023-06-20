@@ -24,13 +24,13 @@ class AllEmployers(APIView):
 
 
 class EmployerView(generics.GenericAPIView):
-    serializer_class = EmployerSerializer
+    serializer_class = ViewEmployerSerializer
 
     def get(self, request, id):
         if request.method == "GET":
             if id:
                 employer = Employer.objects.get(id=id)
-                serializer = EmployerSerializer(employer)
+                serializer = ViewEmployerSerializer(employer)
                 if employer:
                     return Response(serializer.data)
                 else:
@@ -40,7 +40,7 @@ class EmployerView(generics.GenericAPIView):
     def put(self, request, id):
         employer = Employer.objects.get(id=id)
         if employer:
-            serializer = EmployerSerializer(
+            serializer = ViewEmployerSerializer(
                 employer, data=request.data, partial=True)
             if serializer.is_valid():
                 serializer.save()
@@ -122,7 +122,6 @@ class GetAllJobs(APIView):
             serializer = ViewJobSerializer(jobs, many=True)
             return Response(serializer.data)
 
-
 class JobView(generics.GenericAPIView):
     serializer_class = ViewJobSerializer
 
@@ -161,6 +160,22 @@ class GetJobByCompanyIdView(APIView):
                 serializer = ViewJobSerializer(job, many=True)
                 if job:
                     message['response'] = "job found"
+                    return Response(serializer.data, status=status.HTTP_200_OK)
+                else:
+                    message['response'] = "job with company id not found"
+                    return Response(message, status=status.HTTP_404_NOT_FOUND)
+
+class GetLatestJobsView(APIView):
+    serializer_class = ViewJobSerializer
+
+    def get(self, request, companyId):
+        if request.method == "GET":
+            message = {}
+            if companyId:
+                jobs = Job.objects.filter(company=companyId).order_by('-application_deadline')[:3]
+                serializer = ViewJobSerializer(jobs, many=True)
+                if jobs:
+                    message['response'] = "jobs found"
                     return Response(serializer.data, status=status.HTTP_200_OK)
                 else:
                     message['response'] = "job with company id not found"
@@ -243,7 +258,20 @@ class GetCandidatesForAllJobsByCompany(APIView):
             return Response(candidatesCountList, status=status.HTTP_200_OK)
 
 
-    pass
+class GetLatestCandidatesByCompany(APIView):
+    # get the last 3 candidates for company
+   
+    serializer_class = JobSerializer
+    # def get(self, request, companyId):
+    #     if request.method == 'GET':
+    #         candidates = JobApplication.objects.filter(status = "In Review", job =  )
+                
+    #         serializer = ViewJobApplicationSerializer(candidates, many=True)
+            
+           
+            
+    #         return Response(serializer.data, status=status.HTTP_200_OK)
+
 
 
 class GetCandidatesCount(APIView):

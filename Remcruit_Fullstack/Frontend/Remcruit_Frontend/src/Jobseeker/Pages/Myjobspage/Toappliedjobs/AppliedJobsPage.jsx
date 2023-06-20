@@ -54,7 +54,7 @@ function AppliedJobsPage({ job_seeker_id }) {
       });
       setJobApplication(updatedJobApplication);
   
-      const response = await fetch(`http://127.0.0.1:8000/employers/updateApplicationStatus/${id}`);
+      const response = await fetch(`http://127.0.0.1:8000/employer/updateApplicationStatus/${id}`);
       if (response.ok) {
         // Handle successful update
       } else {
